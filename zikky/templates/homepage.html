@@ -15,15 +15,15 @@
     <nav>
         <h1 class="logo">Olacash Housing</h1>
     <ul>
-        <li><a href="/">Homepage</a></li>
-        <li><a href="accounts/contact">Contact</a></li>
+        <li><a href="/" class="a">Homepage</a></li>
+        <li><a href="accounts/contact" class="a">Contact</a></li>
 
         {% if user.is_authenticated %}
         <li class="log">Hello, {{user.username}}</li>
-        <li><a href="accounts/logout">Logout</a></li>
+        <li><a href="accounts/logout" class="a">Logout</a></li>
         {% else %}
-        <li><a href="accounts/register">Register</a></li>
-        <li><a href="accounts/login">Login</a></li>
+        <li><a href="accounts/register" class="a">Register</a></li>
+        <li><a href="accounts/login" class="a">Login</a></li>
         {% endif %}
     </ul>
     </nav>

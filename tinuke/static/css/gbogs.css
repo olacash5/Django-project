@@ -13,6 +13,7 @@ body{
 }
 .logo{
     color: black;
+    text-decoration: none;
 }
 nav{
     height: 70px;
@@ -20,7 +21,6 @@ nav{
 ul{
     display: flex;
     color: #fff;
-	/*margin: 10px;*/
 	list-style-type: none;
     font-size: 15px;
 }
@@ -29,7 +29,13 @@ li{
     left: 1000px;
     top: -40px;
     margin: 5px;
+    color: #fff;
+}
+.a{
     text-decoration: none;
+    color: black;
+}
+.a:hover{
     color: #fff;
 }
 .fola{
@@ -107,8 +113,10 @@ li{
     top: 450px;
     width: 560px;
     left: 380px;
+    background-color: red;
 }
 .contact1{
     position: relative;
     right: 500px;
+    text-decoration: none;
 }
