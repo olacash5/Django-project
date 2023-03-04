@@ -11,18 +11,23 @@ body{
     width: 100px;
     height: 200px;
 }
-
+.logo{
+    color: black;
+}
+nav{
+    height: 70px;
+}
 ul{
     display: flex;
     color: #fff;
-	margin: 10px;
-    padding: 20px;
+	/*margin: 10px;*/
 	list-style-type: none;
     font-size: 15px;
 }
 li{
     position: relative;
     left: 1000px;
+    top: -40px;
     margin: 5px;
     text-decoration: none;
     color: #fff;

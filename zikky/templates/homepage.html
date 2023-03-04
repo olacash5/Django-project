@@ -12,19 +12,22 @@
 <body>
     
     {% block content %}
-
+    <nav>
+        <h1 class="logo">Olacash Housing</h1>
     <ul>
-        <li><a href="/">homepage</a></li>
-        <li><a href="contact">contact</a></li>
+        <li><a href="/">Homepage</a></li>
+        <li><a href="contact">Contact</a></li>
 
         {% if user.is_authenticated %}
         <li class="log">Hello, {{user.username}}</li>
-        <li><a href="accounts/logout">logout</a></li>
+        <li><a href="accounts/logout">Logout</a></li>
         {% else %}
-        <li><a href="accounts/register">register</a></li>
-        <li><a href="accounts/login">login</a></li>
+        <li><a href="accounts/register">Register</a></li>
+        <li><a href="accounts/login">Login</a></li>
         {% endif %}
     </ul>
+    </nav>
+    
     <div class="homepage">
         {% for dest in dests %}
         <img class="boom" src="{{dest.img.url}}">
