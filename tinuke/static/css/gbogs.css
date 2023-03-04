@@ -17,6 +17,10 @@ li{
     background-color: aqua;
     color: red;
 }
+.fola1{
+    top: 200px;
+    border-radius: 15px;
+}
 .register{
     background-color: red;
     color: #fff;
