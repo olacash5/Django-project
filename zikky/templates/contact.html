@@ -7,19 +7,21 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/gbogs.css' %}">
     <title>contact</title>
 </head>
-<body>
-    <h4>Contact Us</h4>
+<body class="contact">
+    <a href="/" class="contact1">
+        <h1 class="logo">Olacash Housing</h1>
+    </a>
+    <h2>Get In Touch Us</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate praesentium aspernatur quisquam dolorum facilis architecto porro cupiditate voluptatibus optio. Nulla laudantium nesciunt eveniet in architecto? Rem velit impedit possimus harum.
     </p>
-    <form action="contact" method="post"> 
-        
+    <form action="contact" method="post" class="sola"> 
         {% csrf_token %}
         <div class="sola">
             <input type="text" name="Name" placeholder="Name"><br>
             <input type="text" name="Address" placeholder="Address"><br>
-            <textarea name="textarea" placeholder="Leave your message"></textarea><br>
-            <input type="submit" name="log in" placeholder="Send It Now" >
+            <textarea name="textarea" placeholder="Leave your message" class="text"></textarea><br>
+            <input type="submit" name="log in" placeholder="Send It Now" id="show">
         </div>
     </form>
 </body>
