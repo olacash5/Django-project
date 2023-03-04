@@ -1,0 +1,26 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gbogs.css' %}">
+    <title>contact</title>
+</head>
+<body>
+    <h4>Contact Us</h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate praesentium aspernatur quisquam dolorum facilis architecto porro cupiditate voluptatibus optio. Nulla laudantium nesciunt eveniet in architecto? Rem velit impedit possimus harum.
+    </p>
+    <form action="contact" method="post"> 
+        
+        {% csrf_token %}
+        <div class="sola">
+            <input type="text" name="Name" placeholder="Name"><br>
+            <input type="text" name="Address" placeholder="Address"><br>
+            <textarea name="textarea" placeholder="Leave your message"></textarea><br>
+            <input type="submit" name="log in" placeholder="Send It Now" >
+        </div>
+    </form>
+</body>
+</html>

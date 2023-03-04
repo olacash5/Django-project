@@ -56,3 +56,9 @@ def register(request):
 def logout(request):
     auth.logout(request)
     return redirect('/')
+
+def contact(request):
+    if request.method == 'POST':
+        Name = request.POST['Name']
+        Address = request.POST['Address']
+        Textarea = request.POST['Textarea']
