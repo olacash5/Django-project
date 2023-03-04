@@ -18,7 +18,7 @@
         <li><a href="contact">contact</a></li>
 
         {% if user.is_authenticated %}
-        <li>Hello, {{user.username}}</li>
+        <li class="log">Hello, {{user.username}}</li>
         <li><a href="accounts/logout">logout</a></li>
         {% else %}
         <li><a href="accounts/register">register</a></li>
@@ -27,17 +27,14 @@
     </ul>
     <div class="homepage">
         {% for dest in dests %}
-    
+        <img class="boom" src="{{dest.img.url}}">
+        
         <h1>{{dest.name}}</h1>
         <h2>{{dest.desc}}</h2>
         {% if dest.offer %}
-        <h4>
-            <a href="#">special offer</a>
-        </h4>
+        <h4><a href="#">special offer</a></h4>
         {% endif %}
         <div>from ${{dest.price}}</div>
-        <img class="boom" src="{{dest.img.url}}">
-    
         {% endfor %}
 
         {% endblock %}
