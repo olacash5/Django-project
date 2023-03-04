@@ -25,22 +25,22 @@
         <li><a href="accounts/login">login</a></li>
         {% endif %}
     </ul>
+    <div class="homepage">
+        {% for dest in dests %}
+    
+        <h1>{{dest.name}}</h1>
+        <h2>{{dest.desc}}</h2>
+        {% if dest.offer %}
+        <h4>
+            <a href="#">special offer</a>
+        </h4>
+        {% endif %}
+        <div>from ${{dest.price}}</div>
+        <img class="boom" src="{{dest.img.url}}">
+    
+        {% endfor %}
 
-    {% for dest in dests %}
-
-    <h1>{{dest.name}}</h1>
-    <h2>{{dest.desc}}</h2>
-    {% if dest.offer %}
-    <h4>
-        <a href="#">special offer</a>
-    </h4>
-    {% endif %}
-    <div>from ${{dest.price}}</div>
-    <img class="boom" src="{{dest.img.url}}">
-
-    {% endfor %}
-
-    {% endblock %}
-
+        {% endblock %}
+    </div>
 </body>
 </html>
