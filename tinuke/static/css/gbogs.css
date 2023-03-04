@@ -1,0 +1,19 @@
+body{
+    background-color: red;
+    color: #fff;
+    text-align: center;    
+}
+
+.boom{
+    width: 200px;
+    height: 200px;
+}
+
+li{
+    display: flex;
+    color: #fff;
+}
+.fola{
+    background-color: aqua;
+    color: red;
+}

@@ -1,0 +1,46 @@
+{% load static %}
+{% static 'images' as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gbogs.css' %}">
+    <title>olacash</title>
+</head>
+<body>
+    
+    {% block content %}
+
+    <ul>
+        <li><a href="/">homepage</a></li>
+        <li><a href="contact">contact</a></li>
+
+        {% if user.is_authenticated %}
+        <li>Hello, {{user.username}}</li>
+        <li><a href="accounts/logout">logout</a></li>
+        {% else %}
+        <li><a href="accounts/register">register</a></li>
+        <li><a href="accounts/login">login</a></li>
+        {% endif %}
+    </ul>
+
+    {% for dest in dests %}
+
+    <h1>{{dest.name}}</h1>
+    <h2>{{dest.desc}}</h2>
+    {% if dest.offer %}
+    <h4>
+        <a href="#">special offer</a>
+    </h4>
+    {% endif %}
+    <div>from ${{dest.price}}</div>
+    <img class="boom" src="{{dest.img.url}}">
+
+    {% endfor %}
+
+    {% endblock %}
+
+</body>
+</html>
