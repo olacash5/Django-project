@@ -62,4 +62,6 @@ def contact(request):
         Name = request.POST['Name']
         Address = request.POST['Address']
         Textarea = request.POST['Textarea']
+
+        
     return render(request, 'contact.html')
